@@ -6,6 +6,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 `;
 
 export const Content = styled.div`
@@ -74,13 +75,16 @@ export const AddUser = styled.div`
         align-items: center;
 
 
-        button{
+        a{
             width: 19%;
             height: 45%;
             border: none;
             background-color: #E29933;
             color: #fff;
             border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 

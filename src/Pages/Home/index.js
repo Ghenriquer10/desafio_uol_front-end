@@ -2,6 +2,7 @@ import React from 'react'
 import * as C from './style'
 import {IoPersonOutline} from 'react-icons/io5'
 import { User } from '../../components/User'
+import {NavLink} from 'react-router-dom'
 
 export const Home = () => {
     return(
@@ -16,7 +17,7 @@ export const Home = () => {
                         <p>Escolha um cliente para visualizar os detalhes</p>
                     </div>
                     <div className='add-button'>
-                        <button>Novo cliente</button>
+                        <NavLink to={'newcostumer'}>Novo cliente</NavLink>
                     </div>
                 </C.AddUser>
                 <User/>
