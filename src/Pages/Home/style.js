@@ -14,6 +14,22 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    .empty-users{
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.4em;
+
+        svg{
+            margin: 0 10px;
+            height: 50px;
+            width: 50px;
+        }
+    }
+
 `;
 
 export const Title = styled.div`

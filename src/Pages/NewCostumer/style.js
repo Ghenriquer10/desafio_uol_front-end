@@ -19,7 +19,6 @@ export const Title = styled.div`
     display: flex;
     margin-top: 70px;
     flex-direction: column;
-
     
     &::after{
         content: '';
@@ -49,15 +48,14 @@ export const AddUser = styled.div`
     height: 70px;
     align-items: center;
     margin-top: 40px;
-
-
+    
+    
     .add-title{
         height: 100%;
+        width: 100%;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        width: 50%;
-
     }
 
     p:first-child{
@@ -66,37 +64,46 @@ export const AddUser = styled.div`
 `;
 
 export const CostumerFields = styled.div`
-    height: 350px;
     width: 80%;
     margin-top: 30px;
-    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 
-    input, select{
-        width: 25%;
-        height: 60px;
-        padding-left: 20px;
-        border-radius: 7px;
-        border: 1px solid grey;
-        font-size: 1.3em;
-        color: gray;
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+
+        input, select{
+            height: 60px;
+            margin: 10px 0;
+            min-width: 300px;
+            width: 30%;
+            padding-left: 20px;
+            border-radius: 7px;
+            border: 1px solid grey;
+            font-size: 1.3em;
+            color: gray;
+        }
     }
+
 `;
 
 export const CostumerButtons = styled.div`
     height: 90px;
-    width: 80%;
+    width: 100%;
     margin-top: 10px;
-    margin-bottom: 50px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     .create-costume, .back-home{
         height: 40px;
-        width: 10%;
+        width: 120px;
         margin: 0 15px;  
         border: none;
     }

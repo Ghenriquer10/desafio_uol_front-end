@@ -1,33 +1,26 @@
-import React, { useState} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { IoPersonOutline } from 'react-icons/io5';
 import * as C from './style';
+import { useForm } from 'react-hook-form';
+import InputMask from 'react-input-mask'
+import { toast } from 'react-toastify'
 
 export const NewCostumer = () => {
 
-    const[costumerValues, setCostumerValues] = useState('')
+    const { register, handleSubmit} = useForm()
+    const [user, setUser] = useState();
 
-    const handleCostumer = (value) => {
-        setCostumerValues(prevValue => ({
-            ...prevValue,
-            [value.target.name] : value.target.value
-        }));
-
-        console.log(costumerValues)
-    }
-
-    const handleSaveCostumer = () => {
-        if(costumerValues.nome === undefined 
-            && costumerValues.email === undefined 
-            && costumerValues.cpf === undefined
-            && costumerValues.telefone === undefined){
-                
-            alert('Preencha os campos')
-            console.log(costumerValues.nome)
-        } else {
-            alert('Usuário adicionado')
-            console.log(costumerValues.nome)
-        }
+    const onSubmit = data => {
+        setUser(data)
+        let localUser = JSON.parse(localStorage.getItem('users')) || [];
+        localUser.push(data)
+        localStorage.setItem('users', JSON.stringify(localUser))        
+        toast.success('Usuário salvo com sucesso!')
+        console.log(user)
+        setTimeout(() => {
+            window.location.reload()
+          }, 3500)
     }
 
     return(
@@ -43,21 +36,23 @@ export const NewCostumer = () => {
                     </div>
                 </C.AddUser>
                 <C.CostumerFields>
-                    <input placeholder='Nome' name='nome' onChange={handleCostumer}/>
-                    <input placeholder='E-mail' name='email' onChange={handleCostumer}/>
-                    <input placeholder='CPF' name='cpf' onChange={handleCostumer}/>
-                    <input placeholder='Telefone' name='telefone' onChange={handleCostumer}/>
-                    <select onChange={handleCostumer}>
-                        <option>Status</option>
-                        <option name="ativo">Ativo</option>
-                        <option name="inativo">inativo</option>
-                        <option name="agurdado">Aguardando ativação</option>
-                    </select>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input required type="text" placeholder='Nome' {...register("name")}/>
+                        <input required type="email" placeholder='E-mail' {...register("email")}/>
+                        <InputMask required type="text" placeholder='CPF' mask="999.999.999-99" {...register("cpf") }/>
+                        <InputMask placeholder='Telefone' mask="(99)99999-9999" {...register("telefone")}/>
+                        <select {...register("status")}>
+                            <option>Status</option>
+                            <option name="ativo" value="ativo">Ativo</option>
+                            <option name="inativo" value="inativo">inativo</option>
+                            <option name="agurdado" value="aguardando">Aguardando ativação</option>
+                        </select>
+                        <C.CostumerButtons>
+                            <button className='create-costume' type='submit'>Criar</button>
+                            <NavLink to={'/'} className='back-home'>Voltar</NavLink>
+                        </C.CostumerButtons>
+                    </form>
                 </C.CostumerFields>
-                <C.CostumerButtons>
-                    <button onClick={handleSaveCostumer} className='create-costume'>Criar</button>
-                    <NavLink to={'/'} className='back-home'>Voltar</NavLink>
-                </C.CostumerButtons>
             </C.Content>
         </C.Container>
     )
