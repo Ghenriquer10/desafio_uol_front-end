@@ -1,6 +1,17 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import * as C from './style'
+import { DataContext } from '../../contexts/datas'
+
+
 export const User = (props) => {
+
+    const { setEditModal, setIndex } = useContext(DataContext)
+    
+    const handleEditModal = (index) => {
+        setIndex(index)
+        setEditModal(prev => !prev)
+    }
+
     return(
         <C.Container>
             <div className='name-email'>
@@ -15,7 +26,7 @@ export const User = (props) => {
                 <p>Status: {props.status}</p>
             </div>
             <div className='edit-button'>
-                <button>Editar</button>
+                <button onClick={e => handleEditModal(props.index)}>Editar</button>
             </div>
         </C.Container>
     )

@@ -3,14 +3,17 @@ import MyRoutes from './Routes/routes';
 import GlobalStyle from './styles/global'
 import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import DataProvider from './contexts/datas';
 
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
-      <ToastContainer autoClose={3000} draggable={false} transition={Zoom}/>
-      <MyRoutes/>
+      <DataProvider>
+        <GlobalStyle/>
+        <ToastContainer autoClose={3000} draggable={false} transition={Zoom}/>
+        <MyRoutes/>
+      </DataProvider>
     </>
   );
 }
