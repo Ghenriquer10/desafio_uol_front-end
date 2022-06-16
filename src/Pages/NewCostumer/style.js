@@ -33,6 +33,12 @@ export const Title = styled.div`
         align-items: center;
     }
 
+    h1{
+        @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 1.3em;
+        }
+    }
+
     svg{
         margin: 0 10px 0 0;
         height: 40px;
@@ -81,13 +87,22 @@ export const CostumerFields = styled.div`
         input, select{
             height: 60px;
             margin: 10px 0;
-            min-width: 300px;
-            width: 30%;
+            width: 400px;
             padding-left: 20px;
             border-radius: 7px;
             border: 1px solid grey;
             font-size: 1.3em;
             color: gray;
+            
+            @media (min-width: 320px) and (max-width: 480px) {
+                height: 40px;
+                width: 270px;
+            }
+
+            @media (min-width: 481px) and (max-width: 768px) {
+                height: 40px;
+                width: 350px;
+            }
         }
     }
 

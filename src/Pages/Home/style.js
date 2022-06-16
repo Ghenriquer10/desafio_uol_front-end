@@ -52,6 +52,12 @@ export const Title = styled.div`
         align-items: center;
     }
 
+    h1{
+        @media (min-width: 320px) and (max-width: 768px) {
+            font-size: 1.3em;
+        }
+    }
+
     svg{
         margin: 0 10px 0 0;
         height: 40px;
@@ -68,13 +74,18 @@ export const AddUser = styled.div`
     align-items: center;
     margin-top: 40px;
 
+    @media (min-width: 320px) and (max-width: 480px) {
+        flex-direction: column;
+        height: 100%;
+    }
+
 
     .add-title{
         height: 100%;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
 
     }
 
@@ -84,16 +95,20 @@ export const AddUser = styled.div`
 
     .add-button{
         display: flex;
-        margin-right: 30px;
-        width: 50%;
-        justify-content: flex-end;
+        width: 100%;
         height: 100%;
+        justify-content: flex-end;
         align-items: center;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            justify-content: center;
+            margin-top: 10px;
+        }
 
 
         a{
-            width: 19%;
-            height: 45%;
+            width: 100px;
+            height: 30px;
             border: none;
             background-color: #E29933;
             color: #fff;

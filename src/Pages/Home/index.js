@@ -6,6 +6,7 @@ import {NavLink} from 'react-router-dom'
 import {BiError} from 'react-icons/bi'
 import { DataContext } from '../../contexts/datas'
 import { EditModal } from '../../components/EditModal'
+import { UserDelete } from '../../components/UserDelete'
 
 export const Home = () => {
 
@@ -23,6 +24,7 @@ export const Home = () => {
         <>
             {editModal ? <EditModal/> : 
             <C.Container>
+                <UserDelete/>
                 <C.Content>
                     <C.Title>
                         <h1><IoPersonOutline/>Painel de clientes</h1>

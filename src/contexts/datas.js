@@ -5,6 +5,7 @@ export const DataContext = createContext({})
 function DataProvider({children}){
 
     const [editModal, setEditModal] = useState(false);
+    const [deleteModal, setDeleteModal] = useState(false);
     const [index, setIndex] = useState();
     const [allUsers, setAllusers] = useState();
 
@@ -14,7 +15,9 @@ function DataProvider({children}){
         index, 
         setIndex, 
         allUsers, 
-        setAllusers
+        setAllusers, 
+        deleteModal, 
+        setDeleteModal
         }}>
             {children}
         </DataContext.Provider>

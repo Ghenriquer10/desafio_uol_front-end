@@ -23,7 +23,18 @@ export const EditWrapper = styled.div`
     background-color: #1F1C1B;
     border: 1px solid #fff;
     margin-top: -100px;
+
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 320px;
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+        width: 480px;
+    }
+
 `;
+
+
 
 export const DetailContent = styled.div`
     display: flex;
@@ -42,14 +53,71 @@ export const Item = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
-    label{
-        margin-top: 20px;
+    margin-top: 50px;
+    
+    form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        label{
+            margin-top: 20px;
+        }
+        
+        input{
+            height: 50px;
+            width: 80%;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3em;
+            
+        @media (min-width: 320px) and (max-width: 768px) {
+            height: 30px;
+            font-size: 1.0em;
+        }
+
+        }
+
+        select{
+            height: 50px;
+            width: 80%;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.3em;
+
+            @media (min-width: 320px) and (max-width: 768px) {
+                height: 30px;
+                font-size: 1.0em;
+            }
+        }
     }
-    input{
-        height: 50px;
-        width: 80%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
+`;
+
+export const Buttons = styled.div`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: row;
+        margin-top: 30px;
+        
+        button{
+            width: 30%;
+            height: 30px;
+            border: none;
+            color: #fff;
+            background-color: #E29933;
+            margin: 0 5px;
+        }
+
+        .edit{
+            background-color: green;
+            color: #fff;
+        }
+
+        .close{
+            background-color: red;
+            color: #fff;
+        }
 `;

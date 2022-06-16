@@ -19,8 +19,8 @@ export const NewCostumer = () => {
         toast.success('Usuário salvo com sucesso!')
         console.log(user)
         setTimeout(() => {
-            window.location.reload()
-          }, 3500)
+            window.location.replace("http://localhost:3000/");
+        }, 2000)
     }
 
     return(
@@ -45,7 +45,8 @@ export const NewCostumer = () => {
                             <option>Status</option>
                             <option name="ativo" value="ativo">Ativo</option>
                             <option name="inativo" value="inativo">inativo</option>
-                            <option name="agurdado" value="aguardando">Aguardando ativação</option>
+                            <option name="agurdado" value="aguardando ativação">Aguardando ativação</option>
+                            <option name="desativado" value="desativado">Desativado</option>
                         </select>
                         <C.CostumerButtons>
                             <button className='create-costume' type='submit'>Criar</button>

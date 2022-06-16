@@ -11,7 +11,7 @@ function App() {
     <>
       <DataProvider>
         <GlobalStyle/>
-        <ToastContainer autoClose={3000} draggable={false} transition={Zoom}/>
+        <ToastContainer autoClose={1000} draggable={false} transition={Zoom}/>
         <MyRoutes/>
       </DataProvider>
     </>

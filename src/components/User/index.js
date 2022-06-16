@@ -1,32 +1,54 @@
 import React, {useContext} from 'react'
 import * as C from './style'
 import { DataContext } from '../../contexts/datas'
+import {AiTwotonePoundCircle} from 'react-icons/ai'
 
 
-export const User = (props) => {
+    export const User = (props) => {
 
-    const { setEditModal, setIndex } = useContext(DataContext)
+    const { setEditModal, setIndex, setDeleteModal } = useContext(DataContext)
     
     const handleEditModal = (index) => {
         setIndex(index)
         setEditModal(prev => !prev)
     }
 
+    const handleDeleteModal = (index) => {
+        setIndex(index)
+        setDeleteModal(prev => !prev)
+    }
+
+    function handleColor(status){
+        switch(status){
+            case "ativo":
+                return "green";
+            case "inativo":
+                return "red";
+            case "aguardando ativação":
+                return "orange";
+            case "desativado":
+                return "gray";
+            default:
+                return "blue"
+        }
+    }
+
     return(
         <C.Container>
             <div className='name-email'>
-                <p>Nome: {props.name}</p>
-                <p>Email: {props.email}</p>
+                <p className='bold'>{props.name}</p>
+                <p className='grey'>{props.email}</p>
             </div>
             <div className='phone'>
-                <p>CPF: {props.cpf}</p>
-                <p>Telefone: {props.telefone}</p>
+                <p className='bold'>{props.cpf}</p>
+                <p className='grey'>{props.telefone}</p>
             </div>
             <div className='status'>
-                <p>Status: {props.status}</p>
+                <p><AiTwotonePoundCircle color={handleColor(props.status)}/> {props.status}</p>
             </div>
             <div className='edit-button'>
-                <button onClick={e => handleEditModal(props.index)}>Editar</button>
+                <button className='delete' onClick={e => handleDeleteModal(props.index)}>Excluir</button>
+                <button className='edit' onClick={e => handleEditModal(props.index)}>Editar</button>
             </div>
         </C.Container>
     )
