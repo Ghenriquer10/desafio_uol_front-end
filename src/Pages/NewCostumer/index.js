@@ -24,6 +24,7 @@ export const NewCostumer = () => {
     }
 
     return(
+        <>
         <C.Container>
             <C.Content>
                 <C.Title>
@@ -56,5 +57,6 @@ export const NewCostumer = () => {
                 </C.CostumerFields>
             </C.Content>
         </C.Container>
+        </>
     )
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 80px;
+    height: 70px;
     width: 80%;
     margin: 10px 0;
     border: 1px solid rgb(185,185,185);
@@ -10,9 +10,9 @@ export const Container = styled.div`
     justify-content: space-around;
     padding: 10px;
 
-    @media (min-width: 320px) and (max-width: 768px) {
+    @media (min-width: 320px) and (max-width: 960px) {
         flex-direction: column;
-        height: 200px;
+        height: 290px;
         padding: 20px;
     }
 
@@ -34,11 +34,11 @@ export const Container = styled.div`
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
+        margin: 5px 0;
     }
 
     .status{
         display: flex;
-        align-items: center;
         justify-content: center;
         text-transform: capitalize;
     }
@@ -50,8 +50,9 @@ export const Container = styled.div`
         height: 100%;
         align-items: center;
         margin-right: 30px;
+        margin: 10px 0;
 
-        @media (min-width: 320px) and (max-width: 768px) {
+        @media (min-width: 320px) and (max-width: 960px) {
             justify-content: center;
             margin-right: 0;
         }

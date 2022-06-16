@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 30px;
 `;
 
 export const Content = styled.div`
@@ -16,7 +15,6 @@ export const Content = styled.div`
     flex-direction: column;
 
     .empty-users{
-        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,7 +33,6 @@ export const Content = styled.div`
 export const Title = styled.div`
     width: 80%;
     display: flex;
-    margin-top: 70px;
     flex-direction: column;
 
     
@@ -73,10 +70,10 @@ export const AddUser = styled.div`
     height: 70px;
     align-items: center;
     margin-top: 40px;
+    margin-bottom: 30px;
 
     @media (min-width: 320px) and (max-width: 480px) {
         flex-direction: column;
-        height: 100%;
     }
 
 

@@ -56,7 +56,7 @@ export const EditModal = () => {
         <>
             <C.DetailsBackground onClick={closeEditlModal} ref={detailRef}>
                     <animated.div style={animation}>
-                        <C.EditWrapper modalEdit={editModal}>
+                        <C.EditWrapper>
                             <C.DetailContent>
                                 <C.Item>
                                     <form onSubmit={handleDatas}>
@@ -74,8 +74,8 @@ export const EditModal = () => {
                                             <option name="desativado" value="desativado">Desativado</option>
                                         </select>
                                         <C.Buttons>
-                                            <button className='edite' type='submit'>Editar dados</button>
                                             <button className='close' onClick={e => setEditModal(false)}>Fechar</button>
+                                            <button className='edite' type='submit'>Editar dados</button>
                                         </C.Buttons>
                                     </form>
                                 </C.Item>

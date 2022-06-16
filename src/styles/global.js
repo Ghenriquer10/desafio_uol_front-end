@@ -8,13 +8,12 @@ export default createGlobalStyle`
         outline: 0;
     }
 
-    body{
-        font-family: sans-serif;
-        height: 100%;
-        
-        button{
-            cursor: pointer;
-        }
+    body, html, #root{
+        font-family: sans-serif;   
+    }
+    
+    button{
+        cursor: pointer;
     }
 
     ul{

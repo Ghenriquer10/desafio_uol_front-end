@@ -40,15 +40,15 @@ export const Home = () => {
                     </C.AddUser>
                         {users ? users.map((user, index) => {
                                 return(
-                                    <User 
-                                        key={index}
-                                        name={user.name}
-                                        email={user.email}
-                                        cpf={user.cpf}
-                                        status={user.status}
-                                        telefone={user.telefone}
-                                        index={index}
-                                    />
+                                        <User 
+                                            key={index}
+                                            name={user.name}
+                                            email={user.email}
+                                            cpf={user.cpf}
+                                            status={user.status}
+                                            telefone={user.telefone}
+                                            index={index}
+                                        />
                                 )
                             }) :
                             <><p className='empty-users'><BiError/> Não há usuários cadastrados!</p></> 
