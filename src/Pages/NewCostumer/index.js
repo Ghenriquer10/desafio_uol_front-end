@@ -19,7 +19,7 @@ export const NewCostumer = () => {
         toast.success('Usuário salvo com sucesso!')
         console.log(user)
         setTimeout(() => {
-            window.location.replace("http://localhost:3000/");
+            window.location.replace("https://uol-host-challenge.netlify.app/");
         }, 2000)
     }
 
