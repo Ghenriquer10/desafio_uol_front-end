@@ -104,8 +104,8 @@ export const AddUser = styled.div`
 
 
         a{
-            width: 100px;
-            height: 30px;
+            width: 120px;
+            height: 40px;
             border: none;
             background-color: #E29933;
             color: #fff;
