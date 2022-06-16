@@ -20,6 +20,11 @@ export const Content = styled.div`
         align-items: center;
         width: 100%;
         font-size: 1.4em;
+        margin-top: 40px;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 1.1em;
+        }
 
         svg{
             margin: 0 10px;
