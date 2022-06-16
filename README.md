@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+## Desafio UOL HOST
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Desafio front-end proposto pela Uol Host para a listagem e cadastro de clientes com o nome, CPF, telefone, e-mail e status do usuário
 
-## Available Scripts
+Adicionados ao projeto opções de editar dados do cliente e excluír cliente, além da responsividade para dispositivos móveis.
 
-In the project directory, you can run:
+Tecs usadas: 
 
-### `npm start`
+React.js - (useState, useEffect, context-api, react-toastfy, react-spring, react-router-dom, react-icons, styled-components)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Persisti os usuários no Local Storage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Caso queira executa-lo em seu computador faça o clone desse repositório e abra-o no visual studio, após isso execute o npm i no terminal de comando para instar o pacote de dependências. Por ultimo execute o projeto com npm start ou yarn start.
 
-### `npm test`
+## Web
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Listagem de usuários:
+![Uol-web1](https://user-images.githubusercontent.com/61561169/174183997-471025d7-e604-417c-912e-4eb3b976d1c0.png)
 
-### `npm run build`
+### Excluír usuário:
+![Uol-web2](https://user-images.githubusercontent.com/61561169/174184777-9f69a179-0cf7-4585-8259-de16ceec3772.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Editar usuário: 
+![Uol-web3](https://user-images.githubusercontent.com/61561169/174184898-8fe61931-614d-4d3a-862e-d80e1d9a64d0.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Novo usuário:
+![Uol-web4](https://user-images.githubusercontent.com/61561169/174185040-dbb370ac-16fb-4f97-b7a1-e4df7f8c8123.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Mobile
 
-### `npm run eject`
+### Listagem de usuário mobile: 
+![Uol-web5](https://user-images.githubusercontent.com/61561169/174185340-002890e8-0947-4688-971c-1f58b8a5cdfb.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Excluir usuário mobile:
+![Uol-web6](https://user-images.githubusercontent.com/61561169/174185463-d7580fdb-ab24-48fa-9343-974d70b4390b.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Editar usuário mobile
+![Uol-web7](https://user-images.githubusercontent.com/61561169/174185703-02791a8e-128c-4e86-aa8d-ee2031b65e3b.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Novo usuário mobile
+![Uol-web8](https://user-images.githubusercontent.com/61561169/174185955-5858bd74-ba7c-410f-b778-f749a3e46694.png)
