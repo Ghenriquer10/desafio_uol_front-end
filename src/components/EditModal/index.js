@@ -32,7 +32,7 @@ export const EditModal = () => {
         toast.success('Editado com sucesso!');
         console.log(allUsers[index]);
         setTimeout(() => {
-            window.location.replace("http://localhost:3000/");
+            window.location.replace("https://uol-host-challenge.netlify.app/");
         }, 2000)
     }
 
