@@ -4,6 +4,8 @@
 
 Adicionados ao projeto opções de editar dados do cliente e excluír cliente, além da responsividade para dispositivos móveis.
 
+## Link do projeto hospedado no Netlify: https://uol-host-challenge.netlify.app
+
 Tecs usadas: 
 
 React.js - (useState, useEffect, context-api, react-toastfy, react-spring, react-router-dom, react-icons, styled-components)
